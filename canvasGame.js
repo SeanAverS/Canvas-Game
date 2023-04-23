@@ -1,13 +1,10 @@
 let canvas = document.getElementById("canvas");
 let ctx = canvas.getContext("2d");
 
-// Square 
-ctx.strokeStyle = "lightgrey";
-ctx.lineWidth = 3;
-ctx.beginPath();
-ctx.lineTo(0, 0);
-ctx.lineTo(100, 0);
-ctx.lineTo(100, 100)
-ctx.lineTo(0, 100);
-ctx.closePath();
-ctx.stroke();
+let squareX = 0;
+
+// Create Grid with Sqaure 
+for (let row = 1; row <= 4; row++) {
+    ctx.strokeRect(squareX, 0, 100, 100);
+    squareX += 100;
+}
