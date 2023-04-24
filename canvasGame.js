@@ -15,3 +15,34 @@ for (let row = 1; row <= 4; row++) {
     squareY += 100;
 }
 
+// Player One Sqaure
+let playerOneX = 0;
+let playerOneY = 0;
+
+// Square
+ctx.fillStyle = "#8C001A";
+ctx.fillRect(playerOneX, playerOneY, 100, 100);
+
+// Font
+ctx.font = "30px Cursive";
+ctx.fillStyle = "white";
+ctx.fillText("P1", playerOneX + 35, playerOneY + 55)
+
+// Player Two Sqaure
+let playerTwoX = 300;
+let playerTwoY = 300;
+
+ctx.fillStyle = "#528AAE";
+ctx.fillRect(playerTwoX, playerTwoY, 100, 100);
+
+// Font
+ctx.font = ("30px Cursive");
+ctx.fillStyle = "white";
+ctx.fillText("P2", playerTwoX + 35, playerTwoY + 55)
+
+
+
+
+
+
+
