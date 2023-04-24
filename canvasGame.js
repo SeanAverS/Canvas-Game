@@ -5,7 +5,6 @@ let squareX = 0;
 let squareY = 0;
 
 // Create Grid with Sqaure 
-
 function makeGrid() {
     for (let row = 1; row <= 4; row++) {
         for (let col = 1; col <= 4; col++) {
@@ -120,6 +119,7 @@ window.addEventListener("keydown", function (e) {
 function playerOneLeft() {
     if (playerOneX >= 100) {
         ctx.clearRect(playerOneX, playerOneY, 99, 99);
+        makeGrid();
         playerOneX -= 100;
         playerOneSquare();
     }
@@ -147,6 +147,7 @@ function playerOneDown() {
 function playerOneRight() {
     if (playerOneX <= 200) {
         ctx.clearRect(playerOneX, playerOneY, 99, 99);
+        makeGrid();
         playerOneX += 100;
         playerOneSquare();
     }
