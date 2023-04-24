@@ -46,7 +46,7 @@ function playerTwoSquare() {
 }
 
 // Load Squares on page load
-window.addEventListener("load", function(){
+window.addEventListener("load", function () {
     playerOneSquare();
     playerTwoSquare();
 });
@@ -54,15 +54,14 @@ window.addEventListener("load", function(){
 // Keyboard Events for Squares
 // Player One
 // Left
-window.addEventListener("keydown", function(e) {
+window.addEventListener("keydown", function (e) {
     if (e.key === "ArrowLeft") {
-        console.log("One-Left");
-        //playerOneLeft
+        playerOneLeft();
     }
 });
 
 // Up
-window.addEventListener("keydown", function(e) {
+window.addEventListener("keydown", function (e) {
     if (e.key === "ArrowUp") {
         console.log("One-Up");
         //playerOneUp
@@ -70,15 +69,14 @@ window.addEventListener("keydown", function(e) {
 });
 
 // Right
-window.addEventListener("keydown", function(e) {
+window.addEventListener("keydown", function (e) {
     if (e.key === "ArrowRight") {
-        console.log("One-Right");
         playerOneRight();
     }
 });
 
 // Down
-window.addEventListener("keydown", function(e) {
+window.addEventListener("keydown", function (e) {
     if (e.key === "ArrowDown") {
         console.log("One-Down");
         //playerOneDown
@@ -87,7 +85,7 @@ window.addEventListener("keydown", function(e) {
 
 // Player Two
 // Left
-window.addEventListener("keydown", function(e) {
+window.addEventListener("keydown", function (e) {
     if (e.key === "a" || e.key === "A") {
         console.log("Two-Left");
         //playerOneLeft
@@ -95,7 +93,7 @@ window.addEventListener("keydown", function(e) {
 });
 
 // Up
-window.addEventListener("keydown", function(e) {
+window.addEventListener("keydown", function (e) {
     if (e.key === "w" || e.key === "W") {
         console.log("Two-Up");
         //playerOneUp
@@ -103,7 +101,7 @@ window.addEventListener("keydown", function(e) {
 });
 
 // Right
-window.addEventListener("keydown", function(e) {
+window.addEventListener("keydown", function (e) {
     if (e.key === "d" || e.key === "D") {
         console.log("Two-Right");
         //playerOneRight
@@ -111,7 +109,7 @@ window.addEventListener("keydown", function(e) {
 });
 
 // Down
-window.addEventListener("keydown", function(e) {
+window.addEventListener("keydown", function (e) {
     if (e.key === "s" || e.key === "S") {
         console.log("Two-Down");
         //playerOneDown
