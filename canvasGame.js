@@ -63,8 +63,7 @@ window.addEventListener("keydown", function (e) {
 // Up
 window.addEventListener("keydown", function (e) {
     if (e.key === "ArrowUp") {
-        console.log("One-Up");
-        //playerOneUp
+        playerOneUp();
     }
 });
 
@@ -78,8 +77,7 @@ window.addEventListener("keydown", function (e) {
 // Down
 window.addEventListener("keydown", function (e) {
     if (e.key === "ArrowDown") {
-        console.log("One-Down");
-        //playerOneDown
+        playerOneDown();
     }
 });
 
@@ -87,34 +85,106 @@ window.addEventListener("keydown", function (e) {
 // Left
 window.addEventListener("keydown", function (e) {
     if (e.key === "a" || e.key === "A") {
-        console.log("Two-Left");
-        //playerOneLeft
+        playerTwoLeft();
     }
 });
 
 // Up
 window.addEventListener("keydown", function (e) {
     if (e.key === "w" || e.key === "W") {
-        console.log("Two-Up");
-        //playerOneUp
+        playerTwoUp();
     }
 });
 
 // Right
 window.addEventListener("keydown", function (e) {
     if (e.key === "d" || e.key === "D") {
-        console.log("Two-Right");
-        //playerOneRight
+        playerTwoRight();
     }
 });
 
 // Down
 window.addEventListener("keydown", function (e) {
     if (e.key === "s" || e.key === "S") {
-        console.log("Two-Down");
-        //playerOneDown
+        playerTwoDown();
     }
 });
+
+// Functions to move player squares w/ Keyboard Events
+// Player One
+// Left
+function playerOneLeft() {
+    if (playerOneX >= 100) {
+        ctx.clearRect(playerOneX, playerOneY, 99, 99);
+        playerOneX -= 100;
+        playerOneSquare();
+    }
+}
+
+// Up
+function playerOneUp() {
+    if (playerOneY >= 100) {
+        ctx.clearRect(playerOneX, playerOneY, 99, 99);
+        playerOneY -= 100;
+        playerOneSquare();
+    }
+}
+
+// Down
+function playerOneDown() {
+    if (playerOneY >= 0 && playerOneY <= 200) {
+        ctx.clearRect(playerOneX, playerOneY, 99, 99);
+        playerOneY += 100;
+        playerOneSquare();
+    }
+}
+
+// Right
+function playerOneRight() {
+    if (playerOneX <= 200) {
+        ctx.clearRect(playerOneX, playerOneY, 99, 99);
+        playerOneX += 100;
+        playerOneSquare();
+    }
+}
+
+// Player Two
+// Left
+function playerTwoLeft() {
+    if (playerTwoX >= 100) {
+        ctx.clearRect(playerTwoX, playerTwoY, 99, 99);
+        playerTwoX -= 100;
+        playerTwoSquare();
+    }
+}
+
+// Up
+function playerTwoUp() {
+    if (playerTwoY >= 100) {
+        ctx.clearRect(playerTwoX, playerTwoY, 99, 99);
+        playerTwoY -= 100;
+        playerTwoSquare();
+    }
+}
+
+// Down
+function playerTwoDown() {
+    if (playerTwoY >= 0 && playerTwoY <= 200) {
+        ctx.clearRect(playerTwoX, playerTwoY, 99, 99);
+        playerTwoY += 100;
+        playerTwoSquare();
+    }
+}
+
+// Right
+function playerTwoRight() {
+    if (playerTwoX <= 200) {
+        ctx.clearRect(playerTwoX, playerTwoY, 99, 99);
+        playerTwoX += 100;
+        playerTwoSquare();
+    }
+}
+
 
 
 
