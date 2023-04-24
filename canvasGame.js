@@ -40,6 +40,77 @@ ctx.font = ("30px Cursive");
 ctx.fillStyle = "white";
 ctx.fillText("P2", playerTwoX + 35, playerTwoY + 55)
 
+// Keyboard Events for Squares
+
+// Player One
+// Left
+window.addEventListener("keydown", function(e) {
+    if (e.key === "ArrowLeft") {
+        console.log("One-Left");
+        //playerOneLeft
+    }
+});
+
+// Up
+window.addEventListener("keydown", function(e) {
+    if (e.key === "ArrowUp") {
+        console.log("One-Up");
+        //playerOneUp
+    }
+});
+
+// Right
+window.addEventListener("keydown", function(e) {
+    if (e.key === "ArrowRight") {
+        console.log("One-Right");
+        //playerOneRight
+    }
+});
+
+
+// Down
+window.addEventListener("keydown", function(e) {
+    if (e.key === "ArrowDown") {
+        console.log("One-Down");
+        //playerOneDown
+    }
+});
+
+// Player Two
+// Left
+window.addEventListener("keydown", function(e) {
+    if (e.key === "a" || e.key === "A") {
+        console.log("Two-Left");
+        //playerOneLeft
+    }
+});
+
+// Up
+window.addEventListener("keydown", function(e) {
+    if (e.key === "w" || e.key === "W") {
+        console.log("Two-Up");
+        //playerOneUp
+    }
+});
+
+// Right
+window.addEventListener("keydown", function(e) {
+    if (e.key === "d" || e.key === "D") {
+        console.log("Two-Right");
+        //playerOneRight
+    }
+});
+
+// Down
+window.addEventListener("keydown", function(e) {
+    if (e.key === "s" || e.key === "S") {
+        console.log("Two-Down");
+        //playerOneDown
+    }
+});
+
+
+
 
 
 
