@@ -15,11 +15,10 @@ for (let row = 1; row <= 4; row++) {
     squareY += 100;
 }
 
+//Squares
 // Player One Sqaure
 let playerOneX = 0;
 let playerOneY = 0;
-
-// Square
 
 function playerOneSquare() {
     ctx.fillStyle = "#8C001A";
@@ -31,13 +30,7 @@ function playerOneSquare() {
     ctx.fillText("P1", playerOneX + 35, playerOneY + 55)
 }
 
-// Load Squares on page load
-window.addEventListener("load", function(){
-    playerOneSquare();
-    playerTwoSquare();
-});
-
-// Player Two Sqaure
+// Player Two Square
 let playerTwoX = 300;
 let playerTwoY = 300;
 
@@ -52,9 +45,13 @@ function playerTwoSquare() {
     ctx.fillText("P2", playerTwoX + 35, playerTwoY + 55)
 }
 
+// Load Squares on page load
+window.addEventListener("load", function(){
+    playerOneSquare();
+    playerTwoSquare();
+});
 
 // Keyboard Events for Squares
-
 // Player One
 // Left
 window.addEventListener("keydown", function(e) {
@@ -79,7 +76,6 @@ window.addEventListener("keydown", function(e) {
         playerOneRight();
     }
 });
-
 
 // Down
 window.addEventListener("keydown", function(e) {
@@ -121,6 +117,7 @@ window.addEventListener("keydown", function(e) {
         //playerOneDown
     }
 });
+
 
 
 
