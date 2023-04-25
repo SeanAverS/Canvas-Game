@@ -4,6 +4,9 @@ let ctx = canvas.getContext("2d");
 let squareX = 0;
 let squareY = 0;
 
+// Initial Screen
+canvas.style.display = "none";
+
 // Create Grid with Sqaure 
 function makeGrid() {
     for (let row = 1; row <= 4; row++) {
