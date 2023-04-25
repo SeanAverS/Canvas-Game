@@ -28,9 +28,20 @@ let turnOutput = document.getElementById('turn-generator-output');
 function generateTurn() {
     let p1Choice = +inputOne.value;
     let p2Choice = +inputTwo.value;
-    
+
     if (p1Choice > 0 && p1Choice <= 10 && p2Choice > 0 && p2Choice <= 10) {
-        // get closest number
+        // Diff between player choice and random number
+        let playerOneDiff = Math.abs(p1Choice - randomNum);
+        let playerTwoDiff = Math.abs(p2Choice - randomNum);
+
+        // Smallest Diff is winner - gets first turn 
+        if (playerOneDiff === playerTwoDiff) {
+            turnOutput.textContent = "Same Numbers. Please try again."
+        } else if (playerOneDiff > playerTwoDiff) {
+            turnOutput.textContent = "Player Two Goes First!"
+        } else {
+            turnOutput.textContent = "Player One Goes First!";
+        }
     } else {
         turnOutput.textContent = "Both Players Must enter a number between 1-10";
     }
