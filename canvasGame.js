@@ -22,11 +22,18 @@ let inputTwo = document.getElementById("p2-choice");
 let turnButton = document.getElementById('turn-generator-button');
 turnButton.addEventListener('click', generateTurn);
 
+// Turn Output / Error Message Display
+let turnOutput = document.getElementById('turn-generator-output');
+
 function generateTurn() {
     let p1Choice = +inputOne.value;
     let p2Choice = +inputTwo.value;
-    console.log(p1Choice);
-    console.log(p2Choice);
+    
+    if (p1Choice > 0 && p1Choice <= 10 && p2Choice > 0 && p2Choice <= 10) {
+        // get closest number
+    } else {
+        turnOutput.textContent = "Both Players Must enter a number between 1-10";
+    }
 }
 
 // Create Grid with Sqaure 
