@@ -7,6 +7,28 @@ let squareY = 0;
 // Initial Screen
 canvas.style.display = "none";
 
+// Turn Generator
+// Random number
+let randomNum = Math.floor(Math.random() * 10) + 1;
+
+// Player Inputs 
+// Player one
+let inputOne = document.getElementById("p1-choice");
+
+// Player two 
+let inputTwo = document.getElementById("p2-choice");
+
+// Button
+let turnButton = document.getElementById('turn-generator-button');
+turnButton.addEventListener('click', generateTurn);
+
+function generateTurn() {
+    let p1Choice = +inputOne.value;
+    let p2Choice = +inputTwo.value;
+    console.log(p1Choice);
+    console.log(p2Choice);
+}
+
 // Create Grid with Sqaure 
 function makeGrid() {
     for (let row = 1; row <= 4; row++) {
