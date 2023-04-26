@@ -203,62 +203,66 @@ function playerTwoSquare() {
 
 // Keyboard Events for Squares
 // Player One
-// Left
-window.addEventListener("keydown", function (e) {
-    if (e.key === "ArrowLeft") {
-        playerOneLeft();
-    }
-});
+function enableP1Input() {
+    // Left
+    window.addEventListener("keydown", function (e) {
+        if (e.key === "ArrowLeft") {
+            playerOneLeft();
+        }
+    });
 
-// Up
-window.addEventListener("keydown", function (e) {
-    if (e.key === "ArrowUp") {
-        playerOneUp();
-    }
-});
+    // Up
+    window.addEventListener("keydown", function (e) {
+        if (e.key === "ArrowUp") {
+            playerOneUp();
+        }
+    });
 
-// Right
-window.addEventListener("keydown", function (e) {
-    if (e.key === "ArrowRight") {
-        playerOneRight();
-    }
-});
+    // Right
+    window.addEventListener("keydown", function (e) {
+        if (e.key === "ArrowRight") {
+            playerOneRight();
+        }
+    });
 
-// Down
-window.addEventListener("keydown", function (e) {
-    if (e.key === "ArrowDown") {
-        playerOneDown();
-    }
-});
+    // Down
+    window.addEventListener("keydown", function (e) {
+        if (e.key === "ArrowDown") {
+            playerOneDown();
+        }
+    });
+}
 
 // Player Two
-// Left
-window.addEventListener("keydown", function (e) {
-    if (e.key === "a" || e.key === "A") {
-        playerTwoLeft();
-    }
-});
+function enableP2Input() {
+    // Left
+    window.addEventListener("keydown", function (e) {
+        if (e.key === "a" || e.key === "A") {
+            playerTwoLeft();
+        }
+    });
 
-// Up
-window.addEventListener("keydown", function (e) {
-    if (e.key === "w" || e.key === "W") {
-        playerTwoUp();
-    }
-});
+    // Up
+    window.addEventListener("keydown", function (e) {
+        if (e.key === "w" || e.key === "W") {
+            playerTwoUp();
+        }
+    });
 
-// Right
-window.addEventListener("keydown", function (e) {
-    if (e.key === "d" || e.key === "D") {
-        playerTwoRight();
-    }
-});
+    // Right
+    window.addEventListener("keydown", function (e) {
+        if (e.key === "d" || e.key === "D") {
+            playerTwoRight();
+        }
+    });
 
-// Down
-window.addEventListener("keydown", function (e) {
-    if (e.key === "s" || e.key === "S") {
-        playerTwoDown();
-    }
-});
+    // Down
+    window.addEventListener("keydown", function (e) {
+        if (e.key === "s" || e.key === "S") {
+            playerTwoDown();
+        }
+    });
+}
 
 // Functions to move player squares w/ Keyboard Events
 // Player One
