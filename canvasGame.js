@@ -139,6 +139,17 @@ function playerTwoSquare() {
     ctx.fillText("P2", playerTwoX + 35, playerTwoY + 55)
 }
 
+//Play The Game
+
+startGameButton.addEventListener('click', playGame);
+function playGame() {
+    if (p1Turn) {
+        console.log("player 1 turn");
+    } else if (p2Turn) {
+        console.log("player 2 turn");
+    }
+}
+
 // Keyboard Events Disable or Enable input depending on turn
 // Disable Player One
 function disableP1Input() {
