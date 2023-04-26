@@ -80,78 +80,6 @@ function startGame() {
     gameControls.style.display = "block";
 }
 
-// currentTurn 
-// Put current turn in startGame()
-function disableP1Input() {
-    // Left
-    window.addEventListener("keydown", function (e) {
-        if (e.key === "ArrowLeft") {
-            e.preventDefault();
-            console.log("works");
-        }
-    });
-
-    // Up
-    window.addEventListener("keydown", function (e) {
-        if (e.key === "ArrowUp") {
-            e.preventDefault();
-            console.log("works");
-        }
-    });
-
-    // Right
-    window.addEventListener("keydown", function (e) {
-        if (e.key === "ArrowRight") {
-            e.preventDefault();
-            console.log("works");
-        }
-    });
-
-    // Down
-    window.addEventListener("keydown", function (e) {
-        if (e.key === "ArrowDown") {
-            e.preventDefault();
-            console.log("works");
-        }
-    });
-}
-
-function disableP2Input() {
-    // Left
-    window.addEventListener("keydown", function (e) {
-        if (e.key === "a" || e.key === "A") {
-            e.preventDefault();
-            console.log("works");
-        }
-    });
-
-    // Up
-    window.addEventListener("keydown", function (e) {
-        if (e.key === "w" || e.key === "W") {
-            e.preventDefault();
-            console.log("works");
-        }
-    });
-
-    // Right
-    window.addEventListener("keydown", function (e) {
-        if (e.key === "d" || e.key === "D") {
-            e.preventDefault();
-
-            console.log("works");
-        }
-    });
-
-    // Down
-    window.addEventListener("keydown", function (e) {
-        if (e.key === "s" || e.key === "S") {
-            e.preventDefault();
-            console.log("works");
-        }
-    });
-}
-
-
 // Load Squares After startGame()
 window.addEventListener("load", function () {
     playerOneSquare();
@@ -205,8 +133,80 @@ function playerTwoSquare() {
     ctx.fillText("P2", playerTwoX + 35, playerTwoY + 55)
 }
 
-// Keyboard Events for Squares
-// Player One
+// Keyboard Events Disable or Enable input depending on turn
+// Disable Player One
+function disableP1Input() {
+    // Left
+    window.addEventListener("keydown", function (e) {
+        if (e.key === "ArrowLeft") {
+            e.preventDefault();
+            console.log("works");
+        }
+    });
+
+    // Up
+    window.addEventListener("keydown", function (e) {
+        if (e.key === "ArrowUp") {
+            e.preventDefault();
+            console.log("works");
+        }
+    });
+
+    // Right
+    window.addEventListener("keydown", function (e) {
+        if (e.key === "ArrowRight") {
+            e.preventDefault();
+            console.log("works");
+        }
+    });
+
+    // Down
+    window.addEventListener("keydown", function (e) {
+        if (e.key === "ArrowDown") {
+            e.preventDefault();
+            console.log("works");
+        }
+    });
+}
+
+// Disable Player Two
+function disableP2Input() {
+    // Left
+    window.addEventListener("keydown", function (e) {
+        if (e.key === "a" || e.key === "A") {
+            e.preventDefault();
+            console.log("works");
+        }
+    });
+
+    // Up
+    window.addEventListener("keydown", function (e) {
+        if (e.key === "w" || e.key === "W") {
+            e.preventDefault();
+            console.log("works");
+        }
+    });
+
+    // Right
+    window.addEventListener("keydown", function (e) {
+        if (e.key === "d" || e.key === "D") {
+            e.preventDefault();
+
+            console.log("works");
+        }
+    });
+
+    // Down
+    window.addEventListener("keydown", function (e) {
+        if (e.key === "s" || e.key === "S") {
+            e.preventDefault();
+            console.log("works");
+        }
+    });
+}
+
+// Keyboard Events Disable or Enable input depending on turn
+// Enable Player One
 function enableP1Input() {
     // Left
     window.addEventListener("keydown", function (e) {
@@ -237,7 +237,7 @@ function enableP1Input() {
     });
 }
 
-// Player Two
+// Enable Player Two
 function enableP2Input() {
     // Left
     window.addEventListener("keydown", function (e) {
@@ -268,7 +268,7 @@ function enableP2Input() {
     });
 }
 
-// Functions to move player squares w/ Keyboard Events
+// Move player squares w/ Enabled Keyboard Events
 // Player One
 // Left
 function playerOneLeft() {
