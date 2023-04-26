@@ -30,15 +30,26 @@ let startGameButton = document.getElementById('start-game-button');
 startGameButton.style.display = "none";
 
 // Initial Screen Text Content
-let intialScreenText = document.getElementById("initial-screen");
+let initialScreenText = document.getElementById("initial-screen");
 let turnGeneratorText = document.getElementById("turn-generator");
+
+// on Start Game Button click
+startGameButton.addEventListener('click', startGame);
+
+function startGame() {
+    // Remove ruleset, turn generator
+    initialScreenText.style.display = "none";
+    turnGeneratorText.style.display = "none";
+
+    // Display game
+    canvas.style.display = "block";
+    canvas.style.margin = "auto";
+}
 
 function displayWinner() {
     startGameButton.style.display = "block";
     startGameButton.style.margin = "auto";
 }
-
-// Seperate function to start game on startGameButton click
 
 function generateTurn() {
     let p1Choice = +inputOne.value;
