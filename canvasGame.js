@@ -1,9 +1,12 @@
+//Game Screen
 let canvas = document.getElementById("canvas");
 let ctx = canvas.getContext("2d");
 
+let gameControls = document.getElementById("game-controls");
+
 // Initial Screen
 canvas.style.display = "none";
-
+gameControls.style.display = "none";
 
 // Turn Generator
 // Random number
@@ -70,6 +73,7 @@ function startGame() {
     // Display game
     canvas.style.display = "block";
     canvas.style.margin = "auto";
+    gameControls.style.display = "block";
 }
 
 // Create Grid with Square 
