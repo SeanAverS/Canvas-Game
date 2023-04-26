@@ -11,46 +11,10 @@ canvas.style.display = "none";
 // Random number
 let randomNum = Math.floor(Math.random() * 10) + 1;
 
-// Player Inputs 
-// Player one
-let inputOne = document.getElementById("p1-choice");
-
-// Player two 
-let inputTwo = document.getElementById("p2-choice");
-
-// Button
+// Turn Generator Button
 let turnButton = document.getElementById('turn-generator-button');
+
 turnButton.addEventListener('click', generateTurn);
-
-// Turn Output / Error Message Display
-let turnOutput = document.getElementById('turn-generator-output');
-
-// Start Game Button
-let startGameButton = document.getElementById('start-game-button');
-startGameButton.style.display = "none";
-
-// Initial Screen Text Content
-let initialScreenText = document.getElementById("initial-screen");
-let turnGeneratorText = document.getElementById("turn-generator");
-
-// on Start Game Button click
-startGameButton.addEventListener('click', startGame);
-
-function startGame() {
-    // Remove ruleset, turn generator
-    initialScreenText.style.display = "none";
-    turnGeneratorText.style.display = "none";
-
-    // Display game
-    canvas.style.display = "block";
-    canvas.style.margin = "auto";
-}
-
-function displayWinner() {
-    startGameButton.style.display = "block";
-    startGameButton.style.margin = "auto";
-}
-
 function generateTurn() {
     let p1Choice = +inputOne.value;
     let p2Choice = +inputTwo.value;
@@ -65,14 +29,49 @@ function generateTurn() {
             turnOutput.textContent = "Same Numbers. Please try again."
         } else if (playerOneDiff > playerTwoDiff) {
             turnOutput.textContent = "Player Two Goes First!"
-            displayWinner();
+            displayTurnWinner();
         } else {
             turnOutput.textContent = "Player One Goes First!";
-            displayWinner();
+            displayTurnWinner();
         }
     } else {
         turnOutput.textContent = "Both Players Must enter a number between 1-10";
     }
+}
+
+// Turn Generator Player Inputs 
+// Player one
+let inputOne = document.getElementById("p1-choice");
+
+// Player two 
+let inputTwo = document.getElementById("p2-choice");
+
+// Turn Output / Error Message Display
+let turnOutput = document.getElementById('turn-generator-output');
+
+function displayTurnWinner() {
+    startGameButton.style.display = "block";
+    startGameButton.style.margin = "auto";
+}
+
+// Start The Actual Game
+// Start Game Button
+let startGameButton = document.getElementById('start-game-button');
+startGameButton.style.display = "none";
+
+// Initial Screen Text Content
+let initialScreenText = document.getElementById("initial-screen");
+let turnGeneratorText = document.getElementById("turn-generator");
+
+startGameButton.addEventListener('click', startGame);
+function startGame() {
+    // Remove ruleset, turn generator
+    initialScreenText.style.display = "none";
+    turnGeneratorText.style.display = "none";
+
+    // Display game
+    canvas.style.display = "block";
+    canvas.style.margin = "auto";
 }
 
 // Create Grid with Sqaure 
@@ -260,20 +259,3 @@ function playerTwoRight() {
         playerTwoSquare();
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
