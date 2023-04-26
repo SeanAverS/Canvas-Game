@@ -29,10 +29,16 @@ let turnOutput = document.getElementById('turn-generator-output');
 let startGameButton = document.getElementById('start-game-button');
 startGameButton.style.display = "none";
 
-function startGame() {
+// Initial Screen Text Content
+let intialScreenText = document.getElementById("initial-screen");
+let turnGeneratorText = document.getElementById("turn-generator");
+
+function displayWinner() {
     startGameButton.style.display = "block";
     startGameButton.style.margin = "auto";
 }
+
+// Seperate function to start game on startGameButton click
 
 function generateTurn() {
     let p1Choice = +inputOne.value;
@@ -48,10 +54,10 @@ function generateTurn() {
             turnOutput.textContent = "Same Numbers. Please try again."
         } else if (playerOneDiff > playerTwoDiff) {
             turnOutput.textContent = "Player Two Goes First!"
-            startGame();
+            displayWinner();
         } else {
             turnOutput.textContent = "Player One Goes First!";
-            startGame();
+            displayWinner();
         }
     } else {
         turnOutput.textContent = "Both Players Must enter a number between 1-10";
