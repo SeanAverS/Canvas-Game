@@ -15,6 +15,10 @@ let randomNum = Math.floor(Math.random() * 10) + 1;
 // Turn Generator Button
 let turnButton = document.getElementById('turn-generator-button');
 
+// Keep Track of Player Turn in Game
+let p1Turn = true;
+let p2Turn = true;
+
 turnButton.addEventListener('click', generateTurn);
 function generateTurn() {
     let p1Choice = +inputOne.value;
@@ -32,11 +36,13 @@ function generateTurn() {
             turnOutput.textContent = "Player Two Goes First!"
             displayTurnWinner();
             disableP1Input();
+            p1Turn = false;
             enableP2Input();
         } else {
             turnOutput.textContent = "Player One Goes First!";
             displayTurnWinner();
             disableP2Input();
+            p2Turn = false;
             enableP1Input();
         }
     } else {
