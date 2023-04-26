@@ -76,6 +76,13 @@ function startGame() {
     gameControls.style.display = "block";
 }
 
+// Load Squares After startGame()
+window.addEventListener("load", function () {
+    playerOneSquare();
+    playerTwoSquare();
+    makeGrid();
+});
+
 // Create Grid with Square 
 let squareX = 0;
 let squareY = 0;
@@ -121,13 +128,6 @@ function playerTwoSquare() {
     ctx.fillStyle = "white";
     ctx.fillText("P2", playerTwoX + 35, playerTwoY + 55)
 }
-
-// Load Squares on page load
-window.addEventListener("load", function () {
-    playerOneSquare();
-    playerTwoSquare();
-    makeGrid();
-});
 
 // Keyboard Events for Squares
 // Player One
