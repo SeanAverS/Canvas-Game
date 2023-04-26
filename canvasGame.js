@@ -1,11 +1,9 @@
 let canvas = document.getElementById("canvas");
 let ctx = canvas.getContext("2d");
 
-let squareX = 0;
-let squareY = 0;
-
 // Initial Screen
 canvas.style.display = "none";
+
 
 // Turn Generator
 // Random number
@@ -74,7 +72,10 @@ function startGame() {
     canvas.style.margin = "auto";
 }
 
-// Create Grid with Sqaure 
+// Create Grid with Square 
+let squareX = 0;
+let squareY = 0;
+
 function makeGrid() {
     for (let row = 1; row <= 4; row++) {
         for (let col = 1; col <= 4; col++) {
