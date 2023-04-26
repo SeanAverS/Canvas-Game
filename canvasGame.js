@@ -31,9 +31,13 @@ function generateTurn() {
         } else if (playerOneDiff > playerTwoDiff) {
             turnOutput.textContent = "Player Two Goes First!"
             displayTurnWinner();
+            disableP1Input();
+            enableP2Input();
         } else {
             turnOutput.textContent = "Player One Goes First!";
             displayTurnWinner();
+            disableP2Input();
+            enableP1Input();
         }
     } else {
         turnOutput.textContent = "Both Players Must enter a number between 1-10";
