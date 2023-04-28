@@ -36,12 +36,14 @@ function generateTurn() {
             turnOutput.textContent = "Player Two Goes First!"
             displayTurnWinner();
             disableP1Input();
+            p2Turn = true;
             p1Turn = false;
             enableP2Input();
-        } else {
+        } else if (playerOneDiff < playerTwoDiff) {
             turnOutput.textContent = "Player One Goes First!";
             displayTurnWinner();
             disableP2Input();
+            p1Turn = true;
             p2Turn = false;
             enableP1Input();
         }
@@ -140,13 +142,29 @@ function playerTwoSquare() {
 }
 
 //Play The Game
+// Current Turns Taken By Player
+let p1TurnCount = 0;
+let p2TurnCount = 0;
 
 startGameButton.addEventListener('click', playGame);
 function playGame() {
-    if (p1Turn) {
-        console.log("player 1 turn");
-    } else if (p2Turn) {
-        console.log("player 2 turn");
+    //enable/disable appro player after max turns(3)
+    if (p1Turn == true && p2Turn == false) {
+        // Listen For Player One Inputs
+        window.addEventListener("keydown", function (e) {
+            if (e.key === "ArrowLeft" || e.key === "ArrowRight" || e.key === "ArrowDown" || e.key === "ArrowUp") {
+                p1TurnCount++;
+                console.log("p1 turn count: " + p1TurnCount);
+            }
+        });
+    } else if (p2Turn == true && p1Turn == false) {
+        // Listen for Player Two Inputs
+        window.addEventListener("keydown", function (e) {
+            if (e.key === "w" || e.key === "W" || e.key === "a" || e.key === "A" || e.key === "s" || e.key === "S" || e.key === "d" || e.key === "D") {
+                p2TurnCount++
+                console.log("p2 turn count: " + p2TurnCount);
+            }
+        })
     }
 }
 
@@ -208,7 +226,6 @@ function disableP2Input() {
     window.addEventListener("keydown", function (e) {
         if (e.key === "d" || e.key === "D") {
             e.preventDefault();
-
             console.log("works");
         }
     });
