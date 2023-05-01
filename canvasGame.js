@@ -35,17 +35,33 @@ function generateTurn() {
         } else if (playerOneDiff > playerTwoDiff) {
             turnOutput.textContent = "Player Two Goes First!"
             displayTurnWinner();
-            disableP1Input();
+            // disable Player One Inputs 
+            disableP1Left();
+            disableP1Up();
+            disableP1Right();
+            disableP1Down();
+            // enable Player Two Inputs
+            enableP2Left();
+            enableP2Up();
+            enableP2Right();
+            enableP2Down();
             p2Turn = true;
             p1Turn = false;
-            enableP2Input();
         } else if (playerOneDiff < playerTwoDiff) {
             turnOutput.textContent = "Player One Goes First!";
             displayTurnWinner();
-            disableP2Input();
+            // disable Player Two Inputs
+            disableP2Left();
+            disableP2Up();
+            disableP2Right();
+            disableP2Down();
+            // enable Player One Inputs
+            enableP1Left();
+            enableP1Up();
+            enableP1Right();
+            enableP1Down();
             p1Turn = true;
             p2Turn = false;
-            enableP1Input();
         }
     } else {
         turnOutput.textContent = "Both Players Must enter a number between 1-10";
