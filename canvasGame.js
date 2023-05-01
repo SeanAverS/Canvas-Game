@@ -148,54 +148,43 @@ let p2TurnCount = 0;
 
 startGameButton.addEventListener('click', playGame);
 function playGame() {
-    //enable/disable appro player after max turns(3)
-    if (p1Turn == true && p2Turn == false) {
-        // Listen For Player One Inputs
-        window.addEventListener("keydown", function (e) {
-            if (e.key === "ArrowLeft" || e.key === "ArrowRight" || e.key === "ArrowDown" || e.key === "ArrowUp") {
-                p1TurnCount++;
-                console.log("p1 turn count: " + p1TurnCount);
-            }
-        });
-    } else if (p2Turn == true && p1Turn == false) {
-        // Listen for Player Two Inputs
-        window.addEventListener("keydown", function (e) {
-            if (e.key === "w" || e.key === "W" || e.key === "a" || e.key === "A" || e.key === "s" || e.key === "S" || e.key === "d" || e.key === "D") {
-                p2TurnCount++
-                console.log("p2 turn count: " + p2TurnCount);
-            }
-        })
-    }
 }
 
 // Keyboard Events Disable or Enable input depending on turn
 // Disable Player One
-function disableP1Input() {
-    // Left
+
+// Left
+function disableP1Left() {
     window.addEventListener("keydown", function (e) {
         if (e.key === "ArrowLeft") {
             e.preventDefault();
             console.log("works");
         }
     });
+}
 
-    // Up
+// Up
+function disableP1Up() {
     window.addEventListener("keydown", function (e) {
         if (e.key === "ArrowUp") {
             e.preventDefault();
             console.log("works");
         }
     });
+}
 
-    // Right
+// Right
+function disableP1Right() {
     window.addEventListener("keydown", function (e) {
         if (e.key === "ArrowRight") {
             e.preventDefault();
             console.log("works");
         }
     });
+}
 
-    // Down
+// Down
+function disableP1Down() {
     window.addEventListener("keydown", function (e) {
         if (e.key === "ArrowDown") {
             e.preventDefault();
@@ -205,32 +194,38 @@ function disableP1Input() {
 }
 
 // Disable Player Two
-function disableP2Input() {
-    // Left
+// Left
+function disableP2Left() {
     window.addEventListener("keydown", function (e) {
         if (e.key === "a" || e.key === "A") {
             e.preventDefault();
             console.log("works");
         }
     });
+}
 
-    // Up
+// Up
+function disableP2Up() {
     window.addEventListener("keydown", function (e) {
         if (e.key === "w" || e.key === "W") {
             e.preventDefault();
             console.log("works");
         }
     });
+}
 
-    // Right
+// Right
+function disableP2Right() {
     window.addEventListener("keydown", function (e) {
         if (e.key === "d" || e.key === "D") {
             e.preventDefault();
             console.log("works");
         }
     });
+}
 
-    // Down
+// Down
+function disableP2Down() {
     window.addEventListener("keydown", function (e) {
         if (e.key === "s" || e.key === "S") {
             e.preventDefault();
@@ -239,31 +234,38 @@ function disableP2Input() {
     });
 }
 
+
 // Keyboard Events Disable or Enable input depending on turn
 // Enable Player One
-function enableP1Input() {
-    // Left
+// Left
+function enableP1Left() {
     window.addEventListener("keydown", function (e) {
         if (e.key === "ArrowLeft") {
             playerOneLeft();
         }
     });
+}
 
-    // Up
+// Up
+function enableP1Up() {
     window.addEventListener("keydown", function (e) {
         if (e.key === "ArrowUp") {
             playerOneUp();
         }
     });
+}
 
-    // Right
+// Right
+function enableP1Right() {
     window.addEventListener("keydown", function (e) {
         if (e.key === "ArrowRight") {
             playerOneRight();
         }
     });
+}
 
-    // Down
+// Down
+function enableP1Down() {
     window.addEventListener("keydown", function (e) {
         if (e.key === "ArrowDown") {
             playerOneDown();
@@ -272,29 +274,35 @@ function enableP1Input() {
 }
 
 // Enable Player Two
-function enableP2Input() {
-    // Left
+// Left
+function enableP2Left() {
     window.addEventListener("keydown", function (e) {
         if (e.key === "a" || e.key === "A") {
             playerTwoLeft();
         }
     });
+}
 
-    // Up
+// Up
+function enableP2Up() {
     window.addEventListener("keydown", function (e) {
         if (e.key === "w" || e.key === "W") {
             playerTwoUp();
         }
     });
+}
 
-    // Right
+// Right
+function enableP2Right() {
     window.addEventListener("keydown", function (e) {
         if (e.key === "d" || e.key === "D") {
             playerTwoRight();
         }
     });
+}
 
-    // Down
+// Down
+function enableP2Down() {
     window.addEventListener("keydown", function (e) {
         if (e.key === "s" || e.key === "S") {
             playerTwoDown();
