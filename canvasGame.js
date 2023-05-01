@@ -170,161 +170,145 @@ function playGame() {
 // Disable Player One
 
 // Left
-function disableP1Left() {
-    window.addEventListener("keydown", function (e) {
-        if (e.key === "ArrowLeft") {
-            e.preventDefault();
-            console.log("works");
-        }
-    });
+function disableP1Left(e) {
+    if (e.key === "ArrowLeft") {
+        e.preventDefault();
+        console.log("works");
+    }
 }
+window.addEventListener("keydown", disableP1Left);
 
 // Up
-function disableP1Up() {
-    window.addEventListener("keydown", function (e) {
-        if (e.key === "ArrowUp") {
-            e.preventDefault();
-            console.log("works");
-        }
-    });
+function disableP1Up(e) {
+    if (e.key === "ArrowUp") {
+        e.preventDefault();
+        console.log("works");
+    }
 }
+window.addEventListener("keydown", disableP1Up);
 
 // Right
-function disableP1Right() {
-    window.addEventListener("keydown", function (e) {
-        if (e.key === "ArrowRight") {
-            e.preventDefault();
-            console.log("works");
-        }
-    });
+function disableP1Right(e) {
+    if (e.key === "ArrowRight") {
+        e.preventDefault();
+        console.log("works");
+    }
 }
+window.addEventListener("keydown", disableP1Right);
 
 // Down
-function disableP1Down() {
-    window.addEventListener("keydown", function (e) {
-        if (e.key === "ArrowDown") {
-            e.preventDefault();
-            console.log("works");
-        }
-    });
+function disableP1Down(e) {
+    if (e.key === "ArrowDown") {
+        e.preventDefault();
+        console.log("works");
+    }
 }
+window.addEventListener("keydown", disableP1Down);
 
 // Disable Player Two
 // Left
-function disableP2Left() {
-    window.addEventListener("keydown", function (e) {
-        if (e.key === "a" || e.key === "A") {
-            e.preventDefault();
-            console.log("works");
-        }
-    });
+function disableP2Left(e) {
+    if (e.key === "a" || e.key === "A") {
+        e.preventDefault();
+        console.log("works");
+    }
 }
+window.addEventListener("keydown", disableP2Left);
 
 // Up
-function disableP2Up() {
-    window.addEventListener("keydown", function (e) {
-        if (e.key === "w" || e.key === "W") {
-            e.preventDefault();
-            console.log("works");
-        }
-    });
+function disableP2Up(e) {
+    if (e.key === "w" || e.key === "W") {
+        e.preventDefault();
+        console.log("works");
+    }
 }
+window.addEventListener("keydown", disableP2Up);
 
 // Right
-function disableP2Right() {
-    window.addEventListener("keydown", function (e) {
-        if (e.key === "d" || e.key === "D") {
-            e.preventDefault();
-            console.log("works");
-        }
-    });
+function disableP2Right(e) {
+    if (e.key === "d" || e.key === "D") {
+        e.preventDefault();
+        console.log("works");
+    }
 }
+window.addEventListener("keydown", disableP2Right);
 
 // Down
-function disableP2Down() {
-    window.addEventListener("keydown", function (e) {
-        if (e.key === "s" || e.key === "S") {
-            e.preventDefault();
-            console.log("works");
-        }
-    });
+function disableP2Down(e) {
+    if (e.key === "s" || e.key === "S") {
+        e.preventDefault();
+        console.log("works");
+    }
 }
+window.addEventListener("keydown", disableP2Down);
 
 
 // Keyboard Events Disable or Enable input depending on turn
 // Enable Player One
 // Left
-function enableP1Left() {
-    window.addEventListener("keydown", function (e) {
-        if (e.key === "ArrowLeft") {
-            playerOneLeft();
-        }
-    });
+function enableP1Left(e) {
+    if (e.key === "ArrowLeft") {
+        playerOneLeft();
+    }
 }
+window.addEventListener("keydown", enableP1Left);
 
 // Up
-function enableP1Up() {
-    window.addEventListener("keydown", function (e) {
-        if (e.key === "ArrowUp") {
-            playerOneUp();
-        }
-    });
+function enableP1Up(e) {
+    if (e.key === "ArrowUp") {
+        playerOneUp();
+    }
 }
+window.addEventListener("keydown", enableP1Up);
 
 // Right
-function enableP1Right() {
-    window.addEventListener("keydown", function (e) {
-        if (e.key === "ArrowRight") {
-            playerOneRight();
-        }
-    });
+function enableP1Right(e) {
+    if (e.key === "ArrowRight") {
+        playerOneRight();
+    }
 }
+window.addEventListener("keydown", enableP1Right);
 
 // Down
-function enableP1Down() {
-    window.addEventListener("keydown", function (e) {
-        if (e.key === "ArrowDown") {
-            playerOneDown();
-        }
-    });
+function enableP1Down(e) {
+    if (e.key === "ArrowDown") {
+        playerOneDown();
+    }
 }
+window.addEventListener("keydown", enableP1Down);
 
 // Enable Player Two
 // Left
-function enableP2Left() {
-    window.addEventListener("keydown", function (e) {
-        if (e.key === "a" || e.key === "A") {
-            playerTwoLeft();
-        }
-    });
+function enableP2Left(e) {
+    if (e.key === "a" || e.key === "A") {
+        playerTwoLeft();
+    }
 }
+window.addEventListener("keydown", enableP2Left);
 
 // Up
-function enableP2Up() {
-    window.addEventListener("keydown", function (e) {
-        if (e.key === "w" || e.key === "W") {
-            playerTwoUp();
-        }
-    });
+function enableP2Up(e) {
+    if (e.key === "w" || e.key === "W") {
+        playerTwoUp();
+    }
 }
+window.addEventListener("keydown", enableP2Up);
 
 // Right
-function enableP2Right() {
-    window.addEventListener("keydown", function (e) {
-        if (e.key === "d" || e.key === "D") {
-            playerTwoRight();
-        }
-    });
+function enableP2Right(e) {
+    if (e.key === "d" || e.key === "D") {
+        playerTwoRight();
+    }
 }
+window.addEventListener("keydown", enableP2Right);
 
 // Down
-function enableP2Down() {
-    window.addEventListener("keydown", function (e) {
-        if (e.key === "s" || e.key === "S") {
-            playerTwoDown();
-        }
-    });
+function enableP2Down(e) {
+    if (e.key === "s" || e.key === "S") {
+        playerTwoDown();
+    }
 }
+window.addEventListener("keydown", enableP2Down);
 
 // Move player squares w/ Enabled Keyboard Events
 // Player One
